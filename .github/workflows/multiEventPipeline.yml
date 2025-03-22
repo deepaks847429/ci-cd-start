@@ -4,6 +4,10 @@ on:
     push: #Event that trrigger the pipeline
         branches:
             - master
+            - test
+    pull_request:
+        branches:
+            - main
 
 jobs:
     on-push:
@@ -11,3 +15,9 @@ jobs:
         steps:
             - name: "Running on master push"
               run: echo "Running on master push"
+    on-pull-request:
+        runs-on: ununtu-latest
+        steps:
+            - name: "Running on main pull request"
+              run: echo "Running on main pull request"
+
