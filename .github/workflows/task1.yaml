@@ -1,0 +1,17 @@
+# print a message while we push on any branch there should be a meaage new commiit have been made
+
+name: "Task ! workflow"
+
+on:
+  push:
+     branches:
+        - '**'
+
+
+jobs:
+    task1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "print new commit"
+              run: echo "new commit have been made"
+
